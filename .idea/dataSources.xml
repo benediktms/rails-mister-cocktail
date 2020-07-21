@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails rails-mister-cocktail: test" uuid="13cb2fca-790c-4413-81d6-debe42fdb2a4">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/rails_mister_cocktail_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rails-mister-cocktail: development" uuid="27c893ad-11b8-4285-a2c7-d33b6eda07de">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/rails_mister_cocktail_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rails-mister-cocktail: production" uuid="7d4c4627-c266-4d12-97b7-b200115b1155">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/rails_mister_cocktail_production</jdbc-url>
+    </data-source>
+  </component>
+</project>
