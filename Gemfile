@@ -47,7 +47,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
-gem "solargraph", "~> 0.39.12"
+# gem "solargraph", "~> 0.39.12"
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
+
+gem "rubocop", "~> 0.88.0"
