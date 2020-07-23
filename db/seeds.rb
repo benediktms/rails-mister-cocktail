@@ -16,8 +16,10 @@ response = URI.open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list
 json = JSON.parse(response)
 
 puts 'inserting ingredients...'
-json.each do |ingredient|
-  new_ingredient = Ingredient.create({ name: ingredient.strIngredient1 })
+# puts json["drinks"]
+
+json["drinks"].each do |ingredient|
+  new_ingredient = Ingredient.create({ name: ingredient[ "strIngredient1" ] })
   puts "added ingredient: #{new_ingredient.name}"
 end
 puts 'completed ingredient population'
