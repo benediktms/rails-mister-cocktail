@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: %i[show edit destroy]
+  before_action :find_cocktail, only: %i[show edit destroy]
   before_action :strong_params, only: %i[create]
 
   def index
@@ -7,7 +7,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # reference for the individual cocktail view. receives the :set_cocktail method
+    # reference for the individual cocktail view. receives the :find_cocktail method
   end
 
   def new
@@ -20,7 +20,6 @@ class CocktailsController < ApplicationController
       redirect_to cocktail_path(@cocktail)
       @cocktail.save
     else
-      @cocktail = Cocktail.new
       render :new
     end
   end

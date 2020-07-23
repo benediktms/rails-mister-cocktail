@@ -1,6 +1,4 @@
 
-T
-$app/views/ingredients/_form.html.erb,a/c/ac74a1ee8ea84adcfeafa8915f81e8d2f537e319
 <
 db/schema.rb,2/c/2cda0c6171fa7d04989507a1dd112e34c40df46d
 L
@@ -21,3 +19,11 @@ H
 db/seeds.rb,8/1/816631bad3665c05f73dd7befe12c619677d6d62
 B
 app/models/dose.rb,e/6/e66065f357f7427ac9a5bc27304aa71837104885
+R
+"app/views/cocktails/index.html.erb,8/9/8943c59b5bf0b119a0aa11ebd61e03bd408acede
+P
+ app/views/cocktails/new.html.erb,a/8/a86bb7ad78fb57b1dd8388f8108fbe3379bb4a3d
+S
+#app/controllers/doses_controller.rb,b/b/bb3c61f5e2a0a1a56e398ffd40b6cd047df25972
+Q
+!app/views/cocktails/show.html.erb,e/f/eff48b1cb415fc7939308c4920f52e9aa0bfab25
