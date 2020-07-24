@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :find_cocktail, only: %i[show edit destroy]
+  before_action :set_cocktail, only: %i[show edit destroy]
   before_action :strong_params, only: %i[create]
 
   def index
@@ -7,7 +7,9 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # reference for the individual cocktail view. receives the :find_cocktail method
+    # reference for the individual cocktail view. receives the :set_cocktail method
+    # todo add a render to show the ingredeints and dose of the cocktail
+    @dose = Dose.find_by_cocktail_id(@cocktail)
   end
 
   def new

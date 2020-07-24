@@ -2,6 +2,10 @@ class DosesController < ApplicationController
   before_action :strong_params, only: :create
   before_action :find_cocktail, only: %i[new create]
 
+  def show
+    @dose = Dose.find(params[:id])
+  end
+
   def new
     @dose = Dose.new
   end

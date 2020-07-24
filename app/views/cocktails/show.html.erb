@@ -1,2 +1,6 @@
 <h1><%= @cocktail.name %></h1>
+
+<%# TODO: add render to show ingredients and dose %>
+<p><%= render template: 'doses/show' %></p>
+
 <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
