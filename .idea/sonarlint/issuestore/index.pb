@@ -50,3 +50,5 @@ B
 config/storage.yml,9/8/98fb829828f5d6f179e3be17f70e2491a1b76852
 R
 "config/environments/development.rb,e/5/e54c3d8d363f5b004526c7fcab8f8eb31da5a209
+U
+%app/assets/stylesheets/cocktails.scss,e/e/eec70bc49ae9fc996f4a1e1589bf2a8c5ab9c560

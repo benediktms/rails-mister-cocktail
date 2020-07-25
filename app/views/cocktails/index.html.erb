@@ -2,25 +2,44 @@
 
 <div class="container-md">
   <div class="row-justify-content-md-center">
-    <div class="col-6">
+    <div class="col-8">
 
       <h1>Welcome to Ben's cocktail bar!</h1>
 
-      <% @cocktails.each do |cocktail| %>
+      <div class="cards">
 
-        <div class="card" style="width: 18rem;">
-          <%= cl_image_tag(cocktail.photo.key, height: 200, crop: :fill_pad, class: 'card-img-top') %>
+        <% @cocktails.each do |cocktail| %>
+
+          <div class="card" style="width: 18rem;">
+
+            <% if cocktail.photo.attached? %>
+              <%= cl_image_tag(
+                    cocktail.photo.key,
+                    class: "card-img-top center-cover"
+                  ) %>
+            <% end %>
+
             <div class="card-body">
+
               <h5 class="card-title"><%= cocktail.name %></h5>
+
               <button type="button" class="btn btn-outline-primary">
                 <%= link_to 'Details', cocktail_path(cocktail) %>
               </button>
-            </div>
-          </div>
-        </div>
 
-      <% end %>
+            </div>
+
+          </div>
+
+        <% end %>
+
+      </div>
 
     </div>
+
+    <button class="btn btn-primary add-cocktail" type="button">
+      <%= link_to 'Create new cocktail', new_cocktail_path %>
+    </button>
+
   </div>
 </div>
