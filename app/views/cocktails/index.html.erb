@@ -1,27 +1,26 @@
-<%= cl_image_tag('yd53sou7e1vjhpmr1ulk', width: 400, height: 300, crop: :fill) %>
+<%#= cl_image_tag('yd53sou7e1vjhpmr1ulk', width: 400, height: 300, crop: :fill) %>
 
 <div class="container-md">
   <div class="row-justify-content-md-center">
     <div class="col-6">
-      <h1>Cocktails</h1>
+
+      <h1>Welcome to Ben's cocktail bar!</h1>
+
       <% @cocktails.each do |cocktail| %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= cocktail.name %></h5>
-          <button type="button" class="btn btn-outline-primary">
-            <%= link_to 'Details', cocktail_path(cocktail) %>
-          </button>
+
+        <div class="card" style="width: 18rem;">
+          <%= cl_image_tag(cocktail.photo.key, height: 200, crop: :fill_pad, class: 'card-img-top') %>
+            <div class="card-body">
+              <h5 class="card-title"><%= cocktail.name %></h5>
+              <button type="button" class="btn btn-outline-primary">
+                <%= link_to 'Details', cocktail_path(cocktail) %>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+
       <% end %>
+
     </div>
   </div>
 </div>
-
-<!--<ul>-->
-  <%# @cocktails.each do |cocktail| %>
-<!--    <li>-->
-      <%#= link_to cocktail.name, cocktail_path(cocktail) %>
-<!--    </li>-->
-  <%# end %>
-<!--</ul>-->
