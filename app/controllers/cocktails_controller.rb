@@ -8,8 +8,6 @@ class CocktailsController < ApplicationController
 
   def show
     # reference for the individual cocktail view. receives the :set_cocktail method
-    # todo add a render to show the ingredeints and dose of the cocktail
-    @dose = Dose.find_by_cocktail_id(@cocktail)
   end
 
   def new

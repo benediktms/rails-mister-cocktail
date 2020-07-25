@@ -27,3 +27,9 @@ S
 #app/controllers/doses_controller.rb,b/b/bb3c61f5e2a0a1a56e398ffd40b6cd047df25972
 Q
 !app/views/cocktails/show.html.erb,e/f/eff48b1cb415fc7939308c4920f52e9aa0bfab25
+S
+#app/views/ingredients/show.html.erb,6/e/6e4351dad11bd110b72de748481759254c3e337f
+M
+app/views/doses/show.html.erb,a/f/af61cf29fb06aadffb84dbb3a23f037e3f8065a9
+Y
+)app/controllers/ingredients_controller.rb,2/6/26e2f8c901a05113c68ff4adcfdb729629b8b289

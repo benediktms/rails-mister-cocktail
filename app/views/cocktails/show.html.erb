@@ -1,6 +1,23 @@
-<h1><%= @cocktail.name %></h1>
+<%= link_to 'Back', root_path %>
 
-<%# TODO: add render to show ingredients and dose %>
-<p><%= render template: 'doses/show' %></p>
+<div class="container-md">
+  <div class="row">
+    <h1><%= @cocktail.name %></h1>
+  </div>
 
-<%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
+  <% @cocktail.doses.each do |dose| %>
+    <div class="row">
+      <div class="col">
+        <p><%= dose.ingredient.name %></p>
+      </div>
+      <div class="col">
+        <p><%= dose.description %></p>
+      </div>
+      <div class="col">
+        <i class="fas fa-trash-alt"></i>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
+</div>

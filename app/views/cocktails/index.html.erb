@@ -1,9 +1,25 @@
-<h1>Cocktails</h1>
+<div class="container-md">
+  <div class="row-justify-content-md-center">
+    <div class="col-6">
+      <h1>Cocktails</h1>
+      <% @cocktails.each do |cocktail| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <button type="button" class="btn btn-outline-primary">
+            <%= link_to 'Details', cocktail_path(cocktail) %>
+          </button>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-<% end %>
-</ul>
+<!--<ul>-->
+  <%# @cocktails.each do |cocktail| %>
+<!--    <li>-->
+      <%#= link_to cocktail.name, cocktail_path(cocktail) %>
+<!--    </li>-->
+  <%# end %>
+<!--</ul>-->
