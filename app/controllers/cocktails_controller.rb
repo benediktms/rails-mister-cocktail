@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: %i[show edit destroy]
+  before_action :set_cocktail, only: %i[show edit destroy update]
   before_action :strong_params, only: %i[create]
 
   def index
@@ -45,6 +45,6 @@ class CocktailsController < ApplicationController
   end
 
   def strong_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 end

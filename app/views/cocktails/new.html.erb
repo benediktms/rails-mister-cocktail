@@ -1,6 +1,9 @@
 <h1><%= @cocktail.name %></h1>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<%= render 'form' %>
+
+<%#= simple_form_for @cocktail do |f| %>
+  <%#= f.input :name %>
+  <%#= f.button :submit %>
+  <%#= f.input :photo, as: :file %>
+<%# end %>

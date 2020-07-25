@@ -3,6 +3,10 @@
 <div class="container-md">
   <div class="row">
     <h1><%= @cocktail.name %></h1>
+    <%= cl_image_tag(@cocktail.photo.key, width: 200) %>
+  </div>
+  <div class="row">
+    <%= link_to 'Edit cocktail', edit_cocktail_path %>
   </div>
 
   <% @cocktail.doses.each do |dose| %>
@@ -14,7 +18,11 @@
         <p><%= dose.description %></p>
       </div>
       <div class="col">
-        <i class="fas fa-trash-alt"></i>
+        <%= link_to dose_path(dose),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
       </div>
     </div>
   <% end %>

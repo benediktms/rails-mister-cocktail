@@ -53,3 +53,4 @@ gem 'simple_form'
 # gem "solargraph", "~> 0.39.12"
 gem 'dotenv-rails', groups: [:development, :test]
 gem "rubocop", "~> 0.88.0"
+gem 'cloudinary', '~> 1.12.0'
