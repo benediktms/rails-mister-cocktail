@@ -1,3 +1,8 @@
 <h1>Edit <%= @cocktail.name %></h1>
 
 <%= render 'form' %>
+<%= link_to 'Remove cocktail',
+            cocktail_path,
+            method: :delete,
+            data: { confirm: 'Are you sure?'}
+%>

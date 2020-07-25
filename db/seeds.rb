@@ -18,8 +18,14 @@ json = JSON.parse(response)
 puts 'inserting ingredients...'
 # puts json["drinks"]
 
-json["drinks"].each do |ingredient|
-  new_ingredient = Ingredient.create({ name: ingredient[ "strIngredient1" ] })
+json['drinks'].each do |ingredient|
+  new_ingredient = Ingredient.create({ name: ingredient['strIngredient1'] })
   puts "added ingredient: #{new_ingredient.name}"
 end
 puts 'completed ingredient population'
+
+# todo add cocktail seeding
+# puts 'Prepopulating database with cocktails...'
+# Cocktail.destroy_all
+
+# cocktail = Cocktail.create({name: 'Bloody Mary', photo: ''})

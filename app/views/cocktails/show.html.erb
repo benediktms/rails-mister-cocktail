@@ -1,43 +1,81 @@
-<%= link_to 'Back', root_path %>
 
 <div class="container-md">
-  <div class="row">
-
-    <h1><%= @cocktail.name %></h1>
-    <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag(@cocktail.photo.key, width: 200) %>
-    <% end %>
-
-  </div>
 
   <div class="row">
-    <%= link_to 'Edit cocktail', edit_cocktail_path %>
+    <div class="col">
+
+      <%= link_to root_path do %>
+        <i class="fas fa-long-arrow-alt-left btn-back"></i>
+      <% end %>
+
+    </div>
   </div>
 
-  <% @cocktail.doses.each do |dose| %>
 
-    <div class="row">
+  <div class="row">
+    <div class="col-6">
 
-      <div class="col">
-        <p><%= dose.ingredient.name %></p>
+      <div class="row">
+
+        <div class="col">
+          <h1><%= @cocktail.name %></h1>
+        </div>
+
+        <div class="col">
+          <%= link_to edit_cocktail_path do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+        </div>
+
       </div>
 
-      <div class="col">
-        <p><%= dose.description %></p>
-      </div>
+      <div class="ingredients-container">
 
-      <div class="col">
+        <% @cocktail.doses.each do |dose| %>
 
-        <%= link_to dose_path(dose),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } do %>
-          <i class="fas fa-trash-alt"></i>
+          <div class="row">
+
+            <div class="col-5">
+              <p><%= dose.ingredient.name %></p>
+            </div>
+
+            <div class="col-5">
+              <p><%= dose.description %></p>
+            </div>
+
+            <div class="col-2">
+
+              <%= link_to dose_path(dose),
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+
+            </div>
+
+          </div>
         <% end %>
 
+        <div class="row">
+
+          <div class="col">
+            <button class="btn btn-outline-light">
+              <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
+            </button>
+          </div>
+
+        </div>
       </div>
 
     </div>
-  <% end %>
 
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
+    <div class="col-6">
+
+      <% if @cocktail.photo.attached? %>
+        <%= cl_image_tag(@cocktail.photo.key, width: 200) %>
+      <% end %>
+
+    </div>
+
+  </div>
 </div>
