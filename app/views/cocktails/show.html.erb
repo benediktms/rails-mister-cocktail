@@ -59,9 +59,9 @@
         <div class="row">
 
           <div class="col">
-            <button class="btn btn-outline-light">
-              <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>
-            </button>
+            <%= link_to new_cocktail_dose_path(@cocktail) do %>
+              <button class="btn btn-primary">Add ingredient</button>
+            <% end %>
           </div>
 
         </div>

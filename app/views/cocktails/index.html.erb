@@ -4,6 +4,10 @@
 
       <h1>Welcome to Ben's cocktail bar!</h1>
 
+      <%= link_to new_cocktail_path do %>
+       <button class="btn btn-primary add-cocktail" type="button">Create new cocktail</button>
+      <% end %>
+
       <div class="cards">
 
         <% @cocktails.each do |cocktail| %>
@@ -21,9 +25,10 @@
 
               <h5 class="card-title"><%= cocktail.name %></h5>
 
-              <button type="button" class="btn btn-outline-primary">
-                <%= link_to 'Details', cocktail_path(cocktail) %>
-              </button>
+
+              <%= link_to cocktail_path(cocktail) do %>
+                <button type="button" class="btn btn-outline-primary">Details</button>
+              <% end %>
 
             </div>
 
@@ -34,10 +39,6 @@
       </div>
 
     </div>
-
-    <button class="btn btn-primary add-cocktail" type="button">
-      <%= link_to 'Create new cocktail', new_cocktail_path %>
-    </button>
 
   </div>
 </div>
