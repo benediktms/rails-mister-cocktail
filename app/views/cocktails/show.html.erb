@@ -21,9 +21,13 @@
           <h1><%= @cocktail.name %></h1>
         </div>
 
-        <div class="col">
+        <div class="col py-3">
           <%= link_to edit_cocktail_path do %>
             <i class="fas fa-edit"></i>
+          <% end %>
+
+          <%= link_to cocktail_path, method: :delete do %>
+            <i class="fas fa-minus-circle text-danger"></i>
           <% end %>
         </div>
 
